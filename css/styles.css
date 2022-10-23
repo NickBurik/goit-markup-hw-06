@@ -891,13 +891,52 @@ body {
   color: rgba(117, 117, 117, 0.5);
 }
 
+.modal-checkbox {
+  margin-bottom: 30px;
+  padding-left: 12px;
+}
+
 .check-text {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--primari-text-color);
+  display: flex;
+  align-items: center;
 }
+
+.check-text span {
+  width: 16px;
+    height: 15px;
+    border: 2px solid rgb(33, 33, 33);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: transparent;
+    transition: background-color 250ms var(--primati-time-function);
+}
+
+.input-check:checked + .check-text span {
+  background-color: var(--accent-color);
+  border-color: transparent;
+  fill: var(--footer-logo-color);
+}
+
+.input-check:focus + .check-text span {
+  border-color: var(--accent-color);
+}
+
+
+
+.policy {
+  color: var(--accent-color);
+    text-decoration: underline;
+    margin-left: 5px;
+  }
 
 .submit-btn {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
